@@ -1,0 +1,66 @@
+🧾 ATM Program (Basic Version)
+
+# Simple ATM Program
+
+print("====== Welcome to Python ATM ======")
+
+# Initial balance
+balance = 5000  
+
+# Step 1: Ask user for PIN
+pin = int(input("Enter your 4-digit PIN: "))
+
+# Step 2: Check if PIN is correct
+if pin == 1234:
+    print("\nLogin successful!")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw Money")
+    print("4. Exit")
+
+    # Step 3: Ask for user choice
+    choice = int(input("\nEnter your choice (1-4): "))
+
+    # Step 4: Use if-else to perform actions
+    if choice == 1:
+        print(f"\nYour current balance is ₹{balance}")
+
+    elif choice == 2:
+        deposit = float(input("Enter amount to deposit: ₹"))
+        balance += deposit
+        print(f"\n₹{deposit} deposited successfully.")
+        print(f"Updated balance: ₹{balance}")
+
+    elif choice == 3:
+        withdraw = float(input("Enter amount to withdraw: ₹"))
+        if withdraw <= balance:
+            balance -= withdraw
+            print(f"\n₹{withdraw} withdrawn successfully.")
+            print(f"Remaining balance: ₹{balance}")
+        else:
+            print("\nInsufficient balance!")
+
+    elif choice == 4:
+        print("\nThank you for using Python ATM 😊")
+
+    else:
+        print("\nInvalid choice! Please try again.")
+
+else:
+    print("\nIncorrect PIN! Please try again.")
+
+
+---
+
+💡 How it works
+
+1. Asks for a PIN (use 1234 to log in).
+
+
+2. Shows a menu (Check Balance / Deposit / Withdraw / Exit).
+
+
+3. Performs actions using simple if-elif-else logic.
+
+
+4. Updates and shows the balance.
